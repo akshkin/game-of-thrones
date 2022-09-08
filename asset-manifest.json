@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/game-of-thrones-rolodex/static/css/main.482906fa.css",
+    "main.js": "/game-of-thrones-rolodex/static/js/main.d76882d0.js",
+    "static/js/787.6bb06318.chunk.js": "/game-of-thrones-rolodex/static/js/787.6bb06318.chunk.js",
+    "static/media/Game of Thrones.ttf": "/game-of-thrones-rolodex/static/media/Game of Thrones.71fa190a8a1a34123fa1.ttf",
+    "index.html": "/game-of-thrones-rolodex/index.html",
+    "main.482906fa.css.map": "/game-of-thrones-rolodex/static/css/main.482906fa.css.map",
+    "main.d76882d0.js.map": "/game-of-thrones-rolodex/static/js/main.d76882d0.js.map",
+    "787.6bb06318.chunk.js.map": "/game-of-thrones-rolodex/static/js/787.6bb06318.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.482906fa.css",
+    "static/js/main.d76882d0.js"
+  ]
+}
