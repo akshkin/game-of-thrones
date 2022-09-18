@@ -9,7 +9,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Links
 -Code URL: [here](https://github.com/akshkin/game-of-thrones)
--Live Site Url: [here](https://stellar-gelato-1f1f28.netlify.app)
+-Live Site Url: [here](https://game-of-thrones-rolodex.netlify.app/)
 
 ## My process
 
