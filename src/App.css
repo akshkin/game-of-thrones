@@ -20,7 +20,7 @@ body {
 .App .header{
   height: 35vh;
   max-width: 100%;
-  background-image: url("../images/game-of-thrones-wallpaper-preview.jpg") ;
+  background-image: url("/public/images/game-of-thrones-wallpaper-preview.jpg") ;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

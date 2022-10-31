@@ -11,10 +11,7 @@
   transform: translateZ(0);
   transition: transform 0.25s ease-out;
 }
-.card-container img{
-  height: 50%;
-  object-fit: contain;
-}
+
 .card-container > p{
   margin-top: 0;
 }

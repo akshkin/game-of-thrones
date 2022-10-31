@@ -44,7 +44,7 @@ function App(){
         />
         <div className="quote-container">
           <blockquote className="quote">"{quote.sentence}"</blockquote>
-          {/* {<cite className="quote-cite">-{quote.character.name}</cite>} */}
+          {quote && <cite className="quote-cite">-{quote.character.name}</cite>}
         </div>
         <CardList characters={filteredCharacters}/>    
       </div>
