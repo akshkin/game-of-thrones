@@ -1,0 +1,20 @@
+.quote-container{
+    margin: 2em auto 3em;
+    color: white;
+    line-height: 2;
+    max-width: 60%;
+  
+}
+.quote-container .quote-cite{
+    font-size: 0.75rem;
+}
+
+.quote-btn{
+    border: none;
+    padding: 1em 1.5em;
+    font-family: inherit;
+    border-radius: 5px;
+    display: block;
+    margin: 1em auto;
+    cursor: pointer;
+}

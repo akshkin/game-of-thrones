@@ -1,13 +1,17 @@
 import "./search-bar.styles.css"
 
-function SearchBar(props){
- 
-    const {className, placeholder, handleChange} = props
+function SearchBar({ setSearchField }){
+
+    function handleChange(event){
+      const searchFieldString = event.target.value.toLocaleLowerCase() 
+      setSearchField(searchFieldString)
+    }
+
     return (
       <input 
-        className={`search-bar ${className}`} 
+        className="search-bar character-search-bar"
         type="search" 
-        placeholder={placeholder} 
+        placeholder="search characters" 
         onChange={handleChange}           
         />
         
