@@ -21,4 +21,14 @@ export const handlers= [
             ])
         )
     }),
+    rest.get("https://api.gameofthronesquotes.xyz/v1/random", (req, res, ctx) => {
+        return res(
+            ctx.json({
+                sentence: "It's better to be cruel than weak.",
+                character: {
+                    name: "Theon Greyjoy"
+                }
+            })
+        )
+    })
 ]

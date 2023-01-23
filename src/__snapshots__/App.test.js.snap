@@ -23,12 +23,14 @@ Object {
         >
           <blockquote
             class="quote"
+            data-testid="blockquote"
           >
             "
             "
           </blockquote>
           <cite
             class="quote-cite"
+            data-testid="cite"
           >
             -
           </cite>
@@ -63,12 +65,14 @@ Object {
       >
         <blockquote
           class="quote"
+          data-testid="blockquote"
         >
           "
           "
         </blockquote>
         <cite
           class="quote-cite"
+          data-testid="cite"
         >
           -
         </cite>

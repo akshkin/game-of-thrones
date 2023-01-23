@@ -17,8 +17,8 @@ function Quote() {
 
     return (
         <div className="quote-container">
-            <blockquote className="quote">"{sentence}"</blockquote>
-            <cite className="quote-cite">-{character?.name}</cite>
+            <blockquote className="quote" data-testid="blockquote">"{sentence}"</blockquote>
+            <cite className="quote-cite" data-testid="cite">-{character?.name}</cite>
             <button className='quote-btn' onClick={getQuote}>New Quote</button>
         </div>
     )
