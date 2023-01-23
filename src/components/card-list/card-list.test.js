@@ -4,7 +4,7 @@ import { render } from "@testing-library/react"
 
 
 describe("CardList", () => {
-    it("should render CardList correctly", () => {
+    test("should render CardList correctly", () => {
         const mockCharacters = [
             {
                 id: 1,

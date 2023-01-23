@@ -25,13 +25,3 @@ body {
   background-size: cover;
   background-position: center;
 }
-.quote-container{
-  margin: 2em auto 3em;
-  color: white;
-  line-height: 2;
-  max-width: 60%;
-
-}
-.quote-container .quote-cite{
-  font-size: 0.75rem;
-}

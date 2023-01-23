@@ -10,8 +10,10 @@ function SearchBar({ setSearchField }){
     return (
       <input 
         className="search-bar character-search-bar"
+        role="search"
         type="search" 
         placeholder="search characters" 
+        aria-label="Search characters"
         onChange={handleChange}           
         />
         
