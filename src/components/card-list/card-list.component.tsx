@@ -1,9 +1,12 @@
-
+import { Character } from "../../App"
 import Card from "../card/card.component"
 
 import "./card-list.style.css"
 
-function CardList({characters}){
+type CardListProps = {
+  characters: Character[]
+}
+function CardList({characters}: CardListProps){
            
     return (
       <div className="card-list">

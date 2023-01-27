@@ -1,8 +1,17 @@
+import { ChangeEventHandler } from "react"
 import "./search-bar.styles.css"
 
-function SearchBar(props){
- 
-    const {className, placeholder, handleChange} = props
+type SearchBarProps = {
+  className: string;
+  placeholder? : string;
+  handleChange: ChangeEventHandler<HTMLInputElement>;
+}
+
+function SearchBar({
+  className,
+  placeholder,
+  handleChange,
+}: SearchBarProps){    
     return (
       <input 
         className={`search-bar ${className}`} 

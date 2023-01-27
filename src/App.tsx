@@ -1,19 +1,32 @@
-import {useEffect, useState} from "react"
+import {useEffect, useState, ChangeEvent} from "react"
 import SearchBar from "./components/search-bar/search-bar.component";
 import CardList from "./components/card-list/card-list.component";
+
+import { getData } from "./utils/fetch.utils.data";
 import './App.css';
+import Quote from "./components/quote/quote.component";
+
+export type Character = {
+  id: string;
+  imageUrl: string;
+  fullName: string;
+  title: string;
+  family: string;
+}
+
 
 function App(){
   const [searchField, setSearchField] = useState('')
-  const [characters, setCharacters] =  useState([])
+  const [characters, setCharacters] =  useState<Character[]>([])
   const [filteredCharacters, setFilteredCharacters] = useState(characters)
-  const [quote, setQuote] = useState('')
-
-  useEffect(()=> {
-    fetch("https://thronesapi.com/api/v2/Characters")
-      .then(response => response.json())
-      .then(data => setCharacters(data))  
-}, [])
+  
+  useEffect(()=> { 
+    const fetchCharacters = async () => {
+      const characs = await getData<Character[]>("https://thronesapi.com/api/v2/Characters")
+      setCharacters(characs)
+    }
+    fetchCharacters()
+  }, [])
 
   useEffect(() => {
     const newfilteredCharacters = characters.filter(character => {
@@ -22,14 +35,7 @@ function App(){
     setFilteredCharacters(newfilteredCharacters)
   }, [characters, searchField])
 
-  useEffect(() => {  
-      fetch("https://api.gameofthronesquotes.xyz/v1/random")
-        .then(response => response.json())
-        .then(data => setQuote(data))
-    
-  }, [])
-
-  function handleChange(event){
+  function handleChange(event: ChangeEvent<HTMLInputElement>):void {
     const searchFieldString = event.target.value.toLocaleLowerCase() 
     setSearchField(searchFieldString)
   }
@@ -42,10 +48,7 @@ function App(){
           placeholder="search characters" 
           handleChange={handleChange}
         />
-        <div className="quote-container">
-          <blockquote className="quote">"{quote.sentence}"</blockquote>
-          {quote && <cite className="quote-cite">-{quote.character.name}</cite>}
-        </div>
+        <Quote />
         <CardList characters={filteredCharacters}/>    
       </div>
     )
